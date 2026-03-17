@@ -1,0 +1,19 @@
+name: mi primer workflows
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  checkout:
+    runs-on: ubuntu-latest
+
+    stepss:
+      - name: Descargar codigo
+        uses: actions/checkout@v4
+
+      - name: ejecuta un saludo
+        uses: echo "hola mundo"
+
+      - name: lista de archivos
+        run: ls -R
